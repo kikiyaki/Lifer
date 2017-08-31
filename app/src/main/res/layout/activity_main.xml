@@ -1,18 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:padding="10dp"
     tools:context="com.hfad.lifer.MainActivity">
+    <GridLayout
+        android:id="@+id/grid"
+        android:columnCount="8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/rub"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/cash"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="000000"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/rub"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@+id/cash"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/health"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:text="000"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/heart"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:id="@+id/men"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@+id/health"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/respect"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:text="000"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/men"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:id="@+id/cherep"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@+id/respect"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/danger"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:text="000"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/cherep"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"/>
+    </GridLayout>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/ActivityText"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/grid" />
+    <ImageView
+        android:id="@+id/ActivityImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ActivityText"
+        android:layout_above="@+id/grid2"/>
+    <GridLayout
+        android:id="@+id/grid2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_above="@+id/TextOld"
+        android:layout_marginLeft="10dp"
+        android:columnCount="2">
+        <Button
+            android:id="@+id/LeftButton"
+            android:layout_width="130dp"
+            android:layout_height="70dp"
+            android:layout_above="@+id/TextOld"
+            android:layout_alignLeft="@+id/ActivityText"
+            android:layout_alignRight="@+id/health"
+            android:layout_gravity="center"
+            android:onClick="onLeftBtnClicked" />
+        <Button
+            android:id="@+id/RightButton"
+            android:layout_width="130dp"
+            android:layout_height="70dp"
+            android:layout_above="@+id/TextOld"
+            android:layout_alignRight="@+id/ActivityText"
+            android:layout_gravity="center"
+            android:onClick="onRightBtnClicked"/>
+    </GridLayout>
 
-</android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/TextOld"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
