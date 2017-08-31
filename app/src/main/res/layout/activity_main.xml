@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:padding="10dp"
+    android:background="@color/BackgroundColor"
     tools:context="com.hfad.lifer.MainActivity">
     <GridLayout
         android:id="@+id/grid"
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/rub"
+            android:src="@drawable/rub"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_gravity="center"/>
@@ -26,6 +28,7 @@
             android:layout_gravity="center"/>
         <ImageView
             android:id="@+id/heart"
+            android:src="@drawable/heart"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_toRightOf="@+id/cash"
@@ -42,6 +45,7 @@
             android:layout_gravity="center"/>
         <ImageView
             android:id="@+id/men"
+            android:src="@drawable/men123"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_toRightOf="@+id/health"
@@ -58,6 +62,7 @@
             android:layout_gravity="center"/>
         <ImageView
             android:id="@+id/cherep"
+            android:src="@drawable/cherep"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_toRightOf="@+id/respect"
@@ -78,7 +83,8 @@
         android:id="@+id/ActivityText"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_below="@+id/grid" />
+        android:layout_below="@+id/grid"
+        android:background="@drawable/button_normal"/>
     <ImageView
         android:id="@+id/ActivityImage"
         android:layout_width="match_parent"
@@ -101,7 +107,8 @@
             android:layout_alignLeft="@+id/ActivityText"
             android:layout_alignRight="@+id/health"
             android:layout_gravity="center"
-            android:onClick="onLeftBtnClicked" />
+            android:onClick="onLeftBtnClicked"
+            android:background="@drawable/button_normal" />
         <Button
             android:id="@+id/RightButton"
             android:layout_width="130dp"
@@ -109,7 +116,8 @@
             android:layout_above="@+id/TextOld"
             android:layout_alignRight="@+id/ActivityText"
             android:layout_gravity="center"
-            android:onClick="onRightBtnClicked"/>
+            android:onClick="onRightBtnClicked"
+            android:background="@drawable/button_normal"/>
     </GridLayout>
 
 
